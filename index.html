@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azad Grill - Untermhaus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+
+    <img id="logo" src="logo.png" alt="Azad Grill Logo" class="logo">
+
+    <div id="divSI">
+      <a href="https://www.instagram.com/explore/locations/1300120843410713/azad-grill-in-untermhaus" target="_blank">
+      <img id="logoinst" src="insta2.png" alt="Instagram" class="">
+      </a>
+      <a href="https://www.facebook.com/AzadGrillinUntermhaus/videos/azad-grill-in-untermhaus-döner-macht-schöner-gera-food-gesund-pizza-nudeln-salat/775741390269346/" target="_blank">
+      <img id="logoface" src="face2.png" alt="Facebook" class="">
+      </a>
+    </div>
+
+    
+   
+  </header>
+  
+  <nav>
+    <a href="#menu">Menü</a>
+    <a href="#about">Über uns</a>
+    <a href="#open">Öffnungszeiten</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+
+  <div id="line1"></div>
+
+
+
+  <section id="cart">
+    <h2>🛒 Vorbestellung</h2>
+
+    <div id="cartItems"></div>
+
+    <p id="cartTotal">Gesamt: 0,00 €</p>
+
+    <p>Jetzt bestellen und in ca. 20 Minuten im Geschäft abholen & bezahlen:</p>
+
+    <button id="bestellenbtn">BESTELLEN</button>
+
+    <p class="cart-hint">
+      Oder rufen Sie uns an und nennen Sie Ihre Bestellung:<br>
+      <a id="tel" href="tel:036573329900">📞 0365 73329900</a>
+    </p>
+  </section>
+
+
+  <div id="line1"></div>
+
+
+
+  <section id="menu">
+    
+    <h2>Unser Menü</h2>
+
+      <button class="accordion-header">
+        DÖNER
+      </button>
+      <div class="accordion-content">
+        <div class="menu-item">
+          <div class="text">
+            <h3>1. Döner</h3>
+            <p>im Fladenbrot mit Salat, Kraut, Zwiebeln, Fleisch & Soße</p>
+          </div>
+          <div class="preis">6,50 €</div>
+          <button class="add-btn" data-name="Döner" data-price="6.5">+</button>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>2. Spezial Döner</h3>
+            <p>im Fladenbrot mit Salat, Kraut, Zwiebeln, Käse, Fleisch & Soße</p>
+          </div>
+          <div class="preis">7,00 €</div>
+          <button class="add-btn" data-name="Spezial Döner" data-price="7.0">+</button>
+
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>3. Döner Hawaii</h3>
+            <p> im Fladenbrot mit Salatm Kraut, Zwiebeln, Ananas, Fleisch & Soße</p>
+          </div>
+          <div class="preis">7,00 €</div>
+          <button class="add-btn" data-name="Döner Hawaii" data-price="7.0">+</button>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>4. Schnitzel Döner</h3>
+            <p>Schnitzel im Fladenbrot mit Salat & Soße</p>
+          </div>
+          <div class="preis">7,50 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>5. Döner Toast</h3>
+            <p>im Fladenbrot mit Dönerfleisch, Zwiebeln & Cheddar - Käse</p>
+          </div>
+          <div class="preis">7,50 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>6. Döner Halloumi</h3>
+            <p>im Flasenbrot mit Salat, Kraut, Zwiebeln, Fleisch & Soße</p>
+          </div>
+          <div class="preis">8,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>7. Döner Halloumi vegetarisch</h3>
+            <p>im Fladenbrot mit Salat, Kraut, Zwiebeln & Soße</p>
+          </div>
+          <div class="preis">6,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>8. Döner Falafel vegetarisch</h3>
+            <p>aus Kichererbsen im Fladenbrot mit Salat, Kraut, Zwiebeln & Soße</p>
+          </div>
+          <div class="preis">6,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>9. Döner Falafel</h3>
+            <p>mit Fleisch im Fladenbrot mit Salat, Kraut, Zwiebeln & Soße</p>
+          </div>
+          <div class="preis">7,50 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>10. Döner vegetarisch</h3>
+            <p>im Fladenbrot mit Salat, Kraut, Zwiebeln & Soße</p>
+          </div>
+          <div class="preis">5,50 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>11. Döner Lupi</h3>
+            <p>nur Fleisch & Soße</p>
+          </div>
+          <div class="preis">6,50 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>12. Kinder Döner</h3>
+            <p>im Fladenbrot mit Salat, Kraut, Zwiebeln, Fleisch & Soße</p>
+          </div>
+          <div class="preis">5,50 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>XL. XL Döner</h3>
+            <p>mit extra Fleisch im Fladenbrot mit Salat, Krautm Zwiebeln & Soße</p>
+          </div>
+          <div class="preis">8,00 €</div>
+        </div>
+      </div>
+
+
+
+      <button class="accordion-header">
+        DÖNERROLLE
+      </button>
+      <div class="accordion-content">
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+          <button class="add-btn" data-name="Dönerrolle" data-price="7.0">+</button>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>17. Döner Hawaii</h3>
+            <p>mit Fleisch, Ananas, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+          <button class="add-btn" data-name="Dönerrolle Hawaii" data-price="7.0">+</button>
+
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+      </div>
+
+      <button class="accordion-header">
+       PIDE
+      </button>
+      <div class="accordion-content">
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+      </div>
+
+      <button class="accordion-header">
+        TELLERGERICHTE
+      </button>
+      <div class="accordion-content">
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+      </div>
+
+      <button class="accordion-header">
+        PIZZA
+      </button>
+      <div class="accordion-content">
+        <div class="menu-item">
+          <div class="text">
+            <h3>Margherita</h3>
+            <p>Tomatensoße & Käse</p>
+          </div>
+          <div class="preis">8,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>Salami</h3>
+            <p>mit Rindersalami</p>
+          </div>
+          <div class="preis">9,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>Schinken</h3>
+            <p>mit Schinken</p>
+          </div>
+          <div class="preis">7,50 €</div>
+          
+        </div>
+      </div>
+
+      <button class="accordion-header">
+        SALAT
+      </button>
+      <div class="accordion-content">
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+      </div>
+
+      <button class="accordion-header">
+        NUDELN
+      </button>
+      <div class="accordion-content">
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+      </div>
+
+      <button class="accordion-header">
+        AUFLÄUFE 
+      </button>
+      <div class="accordion-content">
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+      </div>
+
+      <button class="accordion-header">
+        BURGER
+      </button>
+      <div class="accordion-content">
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+      </div>
+
+      <button class="accordion-header">
+        GETRÄNKE
+      </button>
+      <div class="accordion-content">
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="text">
+            <h3>16. Döner Rolle</h3>
+            <p>mit Fleisch, Salat, Kraut & Zwiebeln</p>
+          </div>
+          <div class="preis">7,00 €</div>
+        </div>
+      </div>
+  </section>
+
+  <div id="line1"></div>
+
+  <section id="about">
+    <h2>Über uns</h2>
+    <p>Bei Azad Grill bieten wir seit Jahren die besten Döner- und Grillgerichte in Untermhaus an. Qualität und Geschmack stehen bei uns an erster Stelle.</p>
+  </section>
+
+  <div id="line1"></div>
+
+  <section id="open">
+    <h2>Öffnungszeiten</h2>
+    <p>Montag - Freitag 10:00 - 21:00 Uhr</p>
+    <p>Samstag Ruhetag</p>
+    <p>Sonn - & Feiertage 12:00 - 21:00 Uhr</p>
+  </section>
+
+  <div id="line1"></div>
+
+  <section id="contact">
+    <h2>Kontakt</h2>
+    <p>Telefonisch Vorbestellen & in 10 Minuten abholen!</p>
+    <p>Adresse: Joliot-Curie Straße 10, 07548 Gera</p>
+    <p>Telefon: 0365 73329900</p>
+  </section>
+
+    <div id="line1"></div>
+
+  <section id="Liefers">
+    <h5> AZAD GRILL Lieferservice</h5>
+
+    <p id="liefersp">
+      für Unternehmen
+    </p>
+
+    <div class="tabelle">
+      <div class="orte">Untermhaus</div>
+      <div class="preis">ab 25 €</div>
+
+      <div class="orte">Debschwitz &  Biblach</div>
+      <div class="preis">ab 35 €</div>
+
+      <div class="orte">Lusan, Zwötzen, Leumnitz</div>
+      <div class="preis">ab 40 €</div>
+    </div>
+  </section>
+
+
+  <div id="line1"></div>
+
+  <footer>
+    &copy; 2025 Azad Grill. Alle Rechte vorbehalten.
+  </footer>
+
+  <script type="module" src="index.js"></script>
+
+
+</body>
+</html>

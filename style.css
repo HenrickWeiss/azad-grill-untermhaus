@@ -1,0 +1,409 @@
+body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: hsl(0, 0%, 18%);
+      color: #f0f0f0;
+      text-align: center;
+    }
+header {
+      
+      color: rgb(37, 0, 100);
+      border-bottom: 4px solid hsl(28, 51%, 24%);
+      position: relative;
+      height: 170px;
+      background-image: url(Azadbanner.png);
+      background-size: 400px;
+      padding: 20px;
+      text-align: center;
+    }
+header img.logo {
+      max-width: 120px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+.social-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s ease;
+    }
+.social-icon:hover {
+      transform: scale(1.2);
+      
+    }
+nav {
+      background-color: hsl(0, 0%, 29%);
+      padding: 10px;
+    }
+nav a {
+      color: white;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+nav a:hover {
+      color: hsl(30, 53%, 64%);
+    }
+section {
+      padding: 30px;
+    }
+h2 {
+      color: hsl(30, 53%, 64%);
+    }
+.menu-item {
+      background: hsl(0, 0%, 27%);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px auto;
+      max-width: 400px;
+      box-shadow: 0 2px 6px hsl(0, 0%, 0%, 0.3);
+      border-left: 6px solid hsl(28, 51%, 24%);
+    }
+footer {
+      background-color: hsl(0, 0%, 12%);
+      color: hsl(0, 0%, 80%);
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      border-top: 4px solid hsl(28, 51%, 24%);
+    }
+#logoinst{
+      border-radius: 7px;
+    }
+#logo{
+      border-radius: 20px;
+    }
+#foto2{
+      transform: rotate(90deg);
+    }
+
+#logoinst{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+    }
+#logoinst:hover{
+        transform: scale(1.2);
+    }
+#logoface{
+      position: absolute;
+      top: 20px;
+      right: 60px;
+      width: 30px;
+      height: 30px;
+    }
+#logoface:hover{
+        transform: scale(1.2);
+    }
+.content {
+      display: none;
+      margin-top: 20px;
+      color: rgb(255, 255, 255);
+    }
+.content.active {
+      display: block;
+      background: hsl(0, 0%, 27%);
+      border: none;
+      border-radius: 8px;
+      border-left: 6px solid hsl(28, 51%, 24%);
+      padding: 20px;
+      width: 67.5%;
+      position: relative;   
+      left: 50%;
+      transform: translate(-50%,-0%);
+    }
+h2{
+      text-decoration: underline;
+    }
+h3{
+      text-decoration: underline;
+    }
+footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5%;            /* WICHTIG: feste Höhe */
+      background-color: hsl(0, 0%, 12%);
+      color: hsl(0, 0%, 80%);
+      border-top: 4px solid hsl(28, 51%, 24%);
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+      background: rgba(20, 20, 20, 0.9);
+      width: 100%;
+    }
+
+
+#Liefers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(0, 0%, 18%);
+  width: 100%;
+  height: 400px;
+  padding: 30px 20px;
+}
+
+/* Überschrift */
+#Liefers h5 {
+  background-color: hsl(0, 0%, 18%);
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* Beschreibungstext */
+#liefersp {
+  text-align: center;
+  max-width: 500px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+/* Tabellenartiger Bereich */
+.tabelle {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 15px 40px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Orte links */
+.orte {
+  text-align: left;
+  color: white;
+}
+
+/* Preise rechts */
+.preis {
+  text-align: right;
+  font-weight: bold;
+  color: white;
+}
+
+
+
+.accordion {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+/* Accordion Header */
+.accordion-header {
+  width: 100%;
+  background: hsl(0, 0%, 27%);
+  color: white;
+  padding: 15px 50px 15px 15px;
+  text-align: left;
+  font-size: 18px;
+  border: none;
+  border-left: 6px solid hsl(28, 51%, 24%);
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 5px;
+  border-radius: 7px;
+}
+.accordion-header:hover{
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: hsl(0, 0%, 18%);
+  color: #f0f0f0;
+}
+
+.accordion {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+
+/* Pfeil */
+.accordion-header::after {
+  content: "▶";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg); /* nach unten */
+  transition: transform 0.25s ease;
+}
+
+/* Pfeil aktiv */
+.accordion-header.active::after {
+  transform: translateY(-50%) rotate(0deg); /* nach rechts */
+}
+
+/* Accordion Content */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background: hsl(0, 0%, 23%);
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+  border-radius: 7px;
+}
+
+
+/* Menü-Einträge */
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+  justify-content: center;
+  border-bottom: 1px solid hsl(0, 0%, 35%);
+  gap: 10px
+}
+.menu-item:hover{
+  transform: scale(1.02);
+  transition: 0.2s;
+}
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item .text h3 {
+  margin: 5px;
+  text-decoration: underline;
+  padding: 0px;
+}
+
+.menu-item .text p {
+  margin: 0 0 0px;
+  padding: 0px;
+}
+.text{
+  padding: 0px;
+}
+.preis {
+  white-space: nowrap;
+  font-weight: bold;
+  text-align: right;
+  align-self: center;
+  justify-self: right;
+  
+
+
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .menu-item {
+    flex-direction: column;
+    padding: 5px;
+    gap: 15px;
+  }
+
+  .preis {
+   position: relative;
+
+  }
+nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+
+nav a {
+  text-align: center;
+  padding: 12px 0;
+}
+
+}
+
+#line1{
+  width: 100%;
+  height: 3px;
+  background-color: hsl(30, 53%, 64%);
+  position: absolute;
+}
+#cart {
+  background: hsl(0, 0%, 22%);
+  padding: 30px;
+  margin-bottom: 80px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  max-width: 400px;
+  background: hsl(0, 0%, 30%);
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.cart-item button {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-btn {
+  background: hsl(30, 53%, 64%);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-btn:hover {
+  transform: scale(1.01);
+}
+.add-btn:active{
+  background-color: hsl(30, 53%, 74%);
+}
+
+#cartTotal {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.cart-hint {
+  margin-top: 20px;
+  font-size: 14px;
+}
+#tel{
+  color: #f0f0f0;
+}
+#bestellenbtn{
+  border-radius: 5px;
+  height: 40px;
+  width: 180px;
+  color: black;
+  background-color: hsl(30, 53%, 64%);
+  font-size: large;
+  border: none;
+}
+#bestellenbtn:hover{
+  transform: scale(1.03);
+}
+#bestellenbtn:active{
+  transform: scale(1.05);
+}
+.add-btn.added {
+  background-color: #4CAF50;
+  color: white;
+  transform: scale(1.01);
+}
