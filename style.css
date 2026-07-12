@@ -1,0 +1,643 @@
+/* ==========================================================
+   AZAD GRILL — style.css
+   Dark, warm grill-house theme. Mobile-first & responsive.
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap');
+
+:root {
+  --bg: hsl(0, 0%, 12%);
+  --surface: hsl(0, 0%, 18%);
+  --surface-alt: hsl(0, 0%, 23%);
+  --surface-raised: hsl(0, 0%, 27%);
+  --surface-raised-hover: hsl(0, 0%, 31%);
+  --border-accent: hsl(28, 51%, 24%);
+  --accent: hsl(30, 53%, 64%);
+  --accent-hover: hsl(30, 53%, 74%);
+  --text: #f0f0f0;
+  --text-muted: hsl(0, 0%, 72%);
+  --danger: hsl(4, 70%, 58%);
+  --success: hsl(122, 39%, 49%);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --header-h: clamp(140px, 28vw, 220px);
+  --max-w: 900px;
+
+  --font-display: 'Oswald', 'Segoe UI', sans-serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text);
+  text-align: center;
+  line-height: 1.5;
+}
+
+main, .page-content {
+  flex: 1 0 auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+header.site-header {
+  position: relative;
+  height: var(--header-h);
+  background-image: linear-gradient(180deg, hsla(0,0%,8%,0.35), hsla(0,0%,8%,0.85)), url("Azadbanner.jpg");
+  background-size: cover;
+  background-position: center 35%;
+  border-bottom: 4px solid var(--border-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+header .logo {
+  width: clamp(64px, 14vw, 110px);
+  height: clamp(64px, 14vw, 110px);
+  border-radius: 50%;
+  box-shadow: 0 4px 16px hsla(0,0%,0%,0.5);
+  object-fit: cover;
+}
+
+.site-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: clamp(1.1rem, 4vw, 1.8rem);
+  color: #fff;
+  text-shadow: 0 2px 8px hsla(0,0%,0%,0.7);
+  margin: 0;
+}
+
+.site-tagline {
+  margin: 0;
+  color: var(--accent);
+  font-size: clamp(0.75rem, 2.5vw, 0.95rem);
+  font-weight: 600;
+}
+
+.social-links {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover,
+.social-icon:focus-visible {
+  transform: scale(1.15);
+}
+
+/* ==========================================================
+   NAV
+   ========================================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: hsl(0, 0%, 15%);
+  border-bottom: 1px solid hsl(0, 0%, 25%);
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 16px;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.nav-links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px 14px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--accent);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .nav-inner {
+    justify-content: flex-start;
+  }
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 1.4rem;
+    padding: 10px 12px;
+    cursor: pointer;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: left;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links a {
+    width: 100%;
+    padding: 12px 16px;
+    border-top: 1px solid hsl(0, 0%, 25%);
+  }
+}
+
+/* ==========================================================
+   GENERIC SECTIONS
+   ========================================================== */
+section {
+  padding: clamp(24px, 5vw, 40px) 16px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
+}
+
+h3 {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.divider {
+  width: 100%;
+  height: 3px;
+  background-color: var(--accent);
+  border: none;
+  margin: 0;
+}
+
+/* ==========================================================
+   BUTTONS
+   ========================================================== */
+.btn-primary,
+#bestellenbtn,
+#hierbestellen {
+  display: inline-block;
+  border-radius: var(--radius-sm);
+  min-height: 44px;
+  padding: 0 24px;
+  color: #1a1a1a;
+  background-color: var(--accent);
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 1.05rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover, #bestellenbtn:hover, #hierbestellen:hover,
+.btn-primary:focus-visible, #bestellenbtn:focus-visible, #hierbestellen:focus-visible {
+  transform: scale(1.03);
+  background-color: var(--accent-hover);
+}
+
+.btn-primary:active, #bestellenbtn:active, #hierbestellen:active {
+  transform: scale(1.01);
+}
+
+.btn-secondary {
+  display: inline-block;
+  border-radius: var(--radius-sm);
+  min-height: 40px;
+  padding: 8px 18px;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--accent);
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background-color: hsla(30, 53%, 64%, 0.12);
+}
+
+/* ==========================================================
+   HERO / VORBESTELLUNG (index)
+   ========================================================== */
+#cart.hero-order {
+  background: var(--surface);
+  padding: 32px 16px;
+}
+
+.cart-hint {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+#tel {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ==========================================================
+   ACCORDION / MENU
+   ========================================================== */
+.accordion {
+  max-width: var(--max-w);
+  margin: 24px auto 0;
+  padding: 0 12px;
+  text-align: left;
+}
+
+.accordion-header {
+  width: 100%;
+  background: var(--surface-raised);
+  color: white;
+  padding: 15px 46px 15px 16px;
+  text-align: left;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 1.05rem;
+  border: none;
+  border-left: 6px solid var(--border-accent);
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 6px;
+  border-radius: var(--radius-sm);
+  min-height: 44px;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-header:hover,
+.accordion-header:focus-visible {
+  background: var(--surface-raised-hover);
+}
+
+.accordion-header::after {
+  content: "▶";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  transition: transform 0.25s ease;
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+.accordion-header.active::after {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background: var(--surface-alt);
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+  border-radius: var(--radius-sm);
+}
+
+.accordion-header.active + .accordion-content {
+  padding: 15px;
+}
+
+.menu-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 10px 16px;
+  padding: 14px 4px;
+  border-bottom: 1px solid hsl(0, 0%, 33%);
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item .text h3 {
+  margin: 0 0 4px;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.menu-item .text p {
+  margin: 0;
+  padding: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.menu-item .preis {
+  white-space: nowrap;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: right;
+}
+
+@media (max-width: 520px) {
+  .menu-item {
+    grid-template-columns: 1fr auto;
+  }
+  .menu-item .preis {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+/* ==========================================================
+   ADD TO CART BUTTON
+   ========================================================== */
+.add-btn {
+  background: var(--accent);
+  color: #1a1a1a;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.add-btn:hover,
+.add-btn:focus-visible {
+  transform: scale(1.06);
+}
+
+.add-btn:active {
+  background-color: var(--accent-hover);
+}
+
+.add-btn.added {
+  background-color: var(--success);
+  color: white;
+}
+
+/* ==========================================================
+   ABOUT / OPEN / CONTACT
+   ========================================================== */
+#about p, #open p, #contact p {
+  max-width: 600px;
+  margin: 8px auto;
+  color: var(--text-muted);
+}
+
+/* ==========================================================
+   LIEFERSERVICE
+   ========================================================== */
+#Liefers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg);
+  width: 100%;
+  padding: 32px 20px;
+}
+
+#Liefers h5 {
+  font-family: var(--font-display);
+  color: white;
+  padding: 10px 20px;
+  margin: 0 0 6px;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+
+#liefersp {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 0 24px;
+  color: var(--text-muted);
+}
+
+.tabelle {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px 32px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.orte {
+  text-align: left;
+  color: white;
+}
+
+.tabelle .preis {
+  text-align: right;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* ==========================================================
+   CHECKOUT / CART (bestellen.html)
+   ========================================================== */
+#checkout {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-top: 28px;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 380px;
+  margin: 0 auto 24px;
+}
+
+.checkout-form input,
+.checkout-form select {
+  min-height: 44px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid hsl(0, 0%, 35%);
+  background: var(--surface-alt);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.checkout-form input::placeholder {
+  color: var(--text-muted);
+}
+
+.checkout-form input:focus-visible,
+.checkout-form select:focus-visible {
+  border-color: var(--accent);
+}
+
+#cart {
+  background: var(--surface);
+  padding: 24px 16px 32px;
+  border-radius: var(--radius-md);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 10px auto;
+  max-width: 420px;
+  background: var(--surface-raised);
+  padding: 10px 15px;
+  border-radius: var(--radius-sm);
+}
+
+.cart-item button {
+  background: none;
+  border: none;
+  color: var(--danger);
+  cursor: pointer;
+  font-size: 18px;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+#cartTotal {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 15px;
+  color: var(--accent);
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer.site-footer {
+  flex-shrink: 0;
+  background-color: hsl(0, 0%, 10%);
+  color: hsl(0, 0%, 80%);
+  border-top: 4px solid var(--border-accent);
+  padding: 14px 16px;
+  font-size: 0.85rem;
+}
+
+footer.site-footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+footer.site-footer p {
+  margin: 4px 0;
+}
+
+/* ==========================================================
+   LEGAL PAGES (Impressum / Datenschutz)
+   ========================================================== */
+.legal-content {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+  text-align: left;
+}
+
+.legal-content h1 {
+  text-align: center;
+  color: var(--accent);
+}
+
+.legal-content h2 {
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 28px;
+}
+
+.legal-content h3 {
+  font-size: 1.05rem;
+}
+
+.legal-content ul,
+.legal-content p {
+  color: var(--text-muted);
+}
